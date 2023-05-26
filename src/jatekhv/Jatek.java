@@ -60,6 +60,51 @@ class Jatek {
 
     @Override
     public String toString() {
-        return "H_V --> H:" + harcos.getEletero() + ", V:" + varazslo.getEletero();
+        String mezok = "";
+
+        switch (harcos.getPozicio()) {
+            case 0:
+                switch (varazslo.getPozicio()) {
+                    case 0:
+                        mezok = "X__";
+                        break;
+                    case 1:
+                        mezok = "HV_";
+                        break;
+                    case 2:
+                        mezok = "H_V";
+                        break;
+                }
+                break;
+            case 1:
+                switch (varazslo.getPozicio()) {
+                    case 0:
+                        mezok = "VH_";
+                        break;
+                    case 1:
+                        mezok = "_X_";
+                        break;
+                    case 2:
+                        mezok = "_HV";
+                        break;
+                }
+                break;
+            case 2:
+                switch (varazslo.getPozicio()) {
+                    case 0:
+                        mezok = "V_H";
+                        break;
+                    case 1:
+                        mezok = "_VH";
+                        break;
+                    case 2:
+                        mezok = "__X";
+                        break;
+                }
+                break;
+        }
+
+        return mezok + " --> H:" + harcos.getEletero() + ", V:" + varazslo.getEletero();
+
     }
 }
