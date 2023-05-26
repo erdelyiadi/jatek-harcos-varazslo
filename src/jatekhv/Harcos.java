@@ -3,7 +3,7 @@ package jatekhv;
 
 import java.util.Random;
 
-class Harcos extends Karakter {
+class Harcos extends Karakter implements Harcol {
     public Harcos(int eletero) {
         super(eletero);
     }
@@ -13,6 +13,6 @@ class Harcos extends Karakter {
         Random random = new Random();
         int sebzes = random.nextInt(6) + 1;
         ellenfel.serul(sebzes);
-        System.out.println("Egy mezore léptek, harc következik:\n (Harcos sebzese: " + sebzes +"): H:" + eletero + ", V:" + ellenfel.getEletero());
+        System.out.println("Egy mezore léptek, harc következik:\n (Harcos sebzese: " + sebzes +"): H:" + super.getEletero() + ", V:" + ellenfel.getEletero());
     }
 }

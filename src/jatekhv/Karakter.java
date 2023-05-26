@@ -1,6 +1,6 @@
 package jatekhv;
 
-abstract class Karakter {
+abstract class Karakter implements Harcol {
 
     protected int eletero;
     protected int pozicio;
@@ -23,8 +23,6 @@ abstract class Karakter {
     public int getEletero() {
         return eletero;
     }
-
-    public abstract void harcol(Karakter ellenfel);
 
     public void serul(int sebzes) {
         eletero -= sebzes;
