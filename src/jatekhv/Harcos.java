@@ -3,7 +3,7 @@ package jatekhv;
 
 import java.util.Random;
 
-class Harcos extends Karakter implements Harcol {
+class Harcos extends Karakter  {
     public Harcos(int eletero) {
         super(eletero);
     }
